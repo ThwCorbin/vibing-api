@@ -41,6 +41,13 @@ app.get("/home/posts/", (req, res) => {
   })
 })
 
+app.post("/home/posts/", (req,res) => {
+  Post.create(req.body)
+  .then(post => {
+      res.json(post)
+  })
+})
+
 app.listen(4000, () => {
     console.log("listening..")
 })
