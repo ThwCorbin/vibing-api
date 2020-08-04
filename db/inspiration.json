@@ -1,0 +1,53 @@
+[
+    {
+        "name": "Rocky Balboa",
+        "quote": "You, Me, or nobody is gonna hit as hard as life. But it ain't about how hard you hit. It's about how hard you can get hit and keep moving forward.  "
+    },
+
+    {
+        "name": "Martin Luther King Jr.",
+        "quote": "If you cant't fly then run, if you can't run then walk, if you can't walk then crawl, but whatever you do oyu have to keep moving forward."
+    },
+
+    {
+        "name": "Unknown",
+        "quote": "You learn more from failute than from success. Don't let it stop you. Failure builds character."
+    },
+
+    {
+        "name": "Robert Schuller",
+        "quote": "Tough times don't last tough people do."
+    },
+
+    {
+        "name": "Maya Angelou",
+        "quote": "We may encounter defeats, but we must not be defeated."
+    }, 
+
+    {
+        "name": "Confucius",
+        "quote": "Those who think they can and those who think they can't are both usually right."
+    },
+
+    {
+        "name": "Zig Ziglar",
+        "quote": "You don't have to be great to start, but you have to start be great."
+    },
+
+    {
+        "name": "Wayne Gretzky",
+        "quote": "You miss 100% of the shots you don't take."
+    },
+
+    { 
+        "name": "Jesse Owens",
+        "quote": "The battles that count aren't the ones for gold medals. The struggles within yourself--the invisible battles inside all of us--that's where it's at."
+    },
+
+    {
+        "name": "George Eliot",
+        "quote": "It is never too late to be what you might have been."
+
+    }
+
+]
