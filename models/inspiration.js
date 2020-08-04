@@ -6,6 +6,6 @@ const inspirationSchema = new Schema ({
     quote: String
 })
 
-House = mongoose.model("House", inspirationSchema)
+Inspiration = mongoose.model("Inspiration", inspirationSchema)
 
-module.exports = House
+module.exports = Inspiration
