@@ -15,9 +15,15 @@ app.get("/home/inspirations", (req, res) => {
   });
 });
 
-app.get("home/users", (req, res) => {
+app.get("/home/users/", (req, res) => {
   User.find({}).then((users) => {
     res.json(users)
+  })
+})
+
+app.get("/home/posts/", (req, res) => {
+  Post.find({}).then((posts) =>{
+    res.json(posts)
   })
 })
 
