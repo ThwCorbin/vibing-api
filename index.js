@@ -28,6 +28,13 @@ app.get("/home/users/", (req, res) => {
   })
 })
 
+app.post("/home/users/", (req,res) => {
+  User.create(req.body)
+  .then(user => {
+      res.json(user)
+  })
+})
+
 app.get("/home/posts/", (req, res) => {
   Post.find({}).then((posts) =>{
     res.json(posts)
