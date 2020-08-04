@@ -15,6 +15,13 @@ app.get("/home/inspirations", (req, res) => {
   });
 });
 
+app.post("/home/inspirations", (req,res) => {
+  Inspiration.create(req.body)
+  .then(inspiration => {
+      res.json(inspiration)
+  })
+})
+
 app.get("/home/users/", (req, res) => {
   User.find({}).then((users) => {
     res.json(users)
