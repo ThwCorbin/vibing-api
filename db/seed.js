@@ -20,7 +20,7 @@ const userData = userJSON.map((item) => {
   return user;
 });
 
-const inspirationData = inspirationData.map((item) => {
+const inspirationData = inspirationJSON.map((item) => {
   inspiration = {};
   inspiration.name = item.name;
   inspiration.quote = item.quote;
