@@ -10,10 +10,16 @@ app.get("/", (req, res) => {
 });
 
 app.get("/home/inspirations", (req, res) => {
-  Inspiration.find({}).then((inspiration) => {
-    res.json(inspiration);
+  Inspiration.find({}).then((inspirations) => {
+    res.json(inspirations);
   });
 });
+
+app.get("home/users", (req, res) => {
+  User.find({}).then((users) => {
+    res.json(users)
+  })
+})
 
 app.listen(4000, () => {
     console.log("listening..")
