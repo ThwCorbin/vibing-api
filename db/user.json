@@ -1,0 +1,19 @@
+[
+   {
+       "username": "jscott4720",
+       "email": "jscott4720@gmail.com",
+       "password": "thisisapassword"
+   },
+
+   { 
+       "username": "ThWCorbin",
+       "email": "ThWCorbin@email.net",
+       "password": "thisisanotherpassword"
+   },
+
+   { 
+    "username": "Taegunjay",
+    "email": "taegunjay@email.gov",
+    "password": "thisisalsoapassword"
+}
+]
