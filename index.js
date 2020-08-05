@@ -1,5 +1,5 @@
 const app = require("express")();
-const Inspiration = require("./models/Inspiration");
+const Inspiration = require("./models/inspiration");
 const User = require("./models/User");
 const Post = require("./models/vibe");
 const bodyParser = require("body-parser");
