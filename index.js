@@ -3,6 +3,10 @@ const Inspiration = require("./models/Inspiration");
 const User = require("./models/User");
 const Post = require("./models/Post");
 const bodyParser = require("body-parser");
+const cors = require("cors")
+
+app.use(cors())
+
 app.use(bodyParser.json());
 
 app.get("/", (req, res) => {
