@@ -27,12 +27,21 @@ app.post("/home/inspirations", (req,res) => {
   })
 })
 
-app.put ('/home/inspirations/:name', (req, res) => {
-  Inspiration.findOneAndUpdate({name: req.params.name}, req.body, {new : true})
+
+app.put ('/home/inspirations/:id', (req, res) => {
+  Inspiration.findOneAndUpdate({_id: req.params.id}, req.body, {new : true})
     .then(inspiration => {
       res.json(inspiration)
     })
 })
+
+app.delete ('/home/inspirations/:id', (req, res) => {
+  Inspiration.findOneAndDelete({_id: req.params.id})
+    .then(inspiration => {
+      res.json(inspiration)
+    })
+})
+
 
 app.get("/home/users/", (req, res) => {
   User.find({}).then((users) => {
