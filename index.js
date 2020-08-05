@@ -88,7 +88,6 @@ app.put ('/home/posts/:id', (req, res) => {
   Post.findOneAndUpdate({_id: req.params.id}, req.body, {new : true})
     .then(post => {
       res.json(post)
-      console.log
     })
 })
 
