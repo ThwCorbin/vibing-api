@@ -7,12 +7,12 @@ const mongoose = require('../models/User')
 const User = mongoose.model('User')
 
 router.post('/signup', (req, res) => {
-    if (req.body.email && req.body.password) {
+    if (req.body.username && req.body.password) {
         let newUser = {
-            email: req.body.email,
+            username: req.body.username,
             password: req.body.password
         }
-        User.findOne({ email: req.body.email })
+        User.findOne({ username: req.body.username })
             .then((user) => {
                 if (!user) {
                     User.create(newUser)
@@ -39,8 +39,8 @@ router.post('/signup', (req, res) => {
 })
 
 router.post('/login', (req, res) => {
-    if (req.body.email && req.body.password) {
-        User.findOne({ email: req.body.email }).then(user => {
+    if (req.body.username && req.body.password) {
+        User.findOne({ user: req.body.username }).then(user => {
             if (user) {
                 if (user.password === req.body.password) {
                     var payload = {

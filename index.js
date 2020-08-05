@@ -8,9 +8,9 @@ const passport = require('./config/passport')();
 const userController = require('./controllers/users.js');
 
 app.use(cors())
-app.use('/users', userController)
 app.use(bodyParser.json());
 app.use(passport.initialize());
+app.use('/home/users', userController)
 
 app.get("/", (req, res) => {
   res.redirect("/home");
@@ -101,7 +101,7 @@ app.delete('/home/posts/:id', (req, res) => {
     })
 })
 
-app.set("port", process.env.PORT || 4000);
+app.set("port", process.env.PORT || 5000);
 
 app.listen(app.get("port"), () => {
   console.log(`✅ PORT: ${app.get("port")} 🌟`);

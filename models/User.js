@@ -1,6 +1,6 @@
 const mongoose = require('../db/connection')
-const mongoose = require('../models/User')
-const User = mongoose.model('User')
+
+
 const Schema = mongoose.Schema
 
 const userSchema = new Schema({
