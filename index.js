@@ -15,11 +15,19 @@ app.get("/home/inspirations", (req, res) => {
   });
 });
 
+
 app.post("/home/inspirations", (req,res) => {
   Inspiration.create(req.body)
   .then(inspiration => {
       res.json(inspiration)
   })
+})
+
+app.put ('/home/inspirations/:name', (req, res) => {
+  Inspiration.findOneAndUpdate({name: req.params.name}, req.body, {new : true})
+    .then(inspiration => {
+      res.json(inspiration)
+    })
 })
 
 app.get("/home/users/", (req, res) => {
