@@ -56,6 +56,13 @@ app.put ('/home/users/:username', (req, res) => {
     })
 })
 
+app.delete ('/home/users/:username', (req, res) => {
+  User.findOneAndDelete({username: req.params.username})
+    .then(user => {
+      res.json(user)
+    })
+})
+
 
 app.post("/home/users/", (req,res) => {
   User.create(req.body)
