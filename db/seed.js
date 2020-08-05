@@ -1,8 +1,8 @@
-const Post = require("../models/Post");
+const Post = require("../models/vibe.js")
 const postJSON = require("./post.json");
 const User = require("../models/User");
 const userJSON = require("./user.json");
-const Inspiration = require("../models/Inspiration");
+const Inspiration = require("../models/inspiration");
 const inspirationJSON = require("./inspiration.json");
 
 const postData = postJSON.map((item) => {

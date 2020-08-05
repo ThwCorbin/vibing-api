@@ -1,7 +1,7 @@
 const app = require("express")();
-const Inspiration = require("./models/Inspiration");
+const Inspiration = require("./models/inspiration");
 const User = require("./models/User");
-const Post = require("./models/Post");
+const Post = require("./models/vibe");
 const bodyParser = require("body-parser");
 const cors = require("cors")
 
@@ -88,7 +88,6 @@ app.put ('/home/posts/:id', (req, res) => {
   Post.findOneAndUpdate({_id: req.params.id}, req.body, {new : true})
     .then(post => {
       res.json(post)
-      console.log
     })
 })
 
@@ -99,6 +98,9 @@ app.delete ('/home/posts/:id', (req, res) => {
     })
 })
 
-app.listen(4000, () => {
-    console.log("listening..")
-})
+app.set("port", process.env.PORT || 4000);
+
+app.listen(app.get("port"), () => {
+  console.log(`✅ PORT: ${app.get("port")} 🌟`);
+});
+
