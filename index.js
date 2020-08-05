@@ -92,6 +92,13 @@ app.put ('/home/posts/:id', (req, res) => {
     })
 })
 
+app.delete ('/home/posts/:id', (req, res) => {
+  Post.findOneAndDelete({_id: req.params.id})
+    .then(post => {
+      res.json(post)
+    })
+})
+
 app.listen(4000, () => {
     console.log("listening..")
 })
