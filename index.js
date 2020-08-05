@@ -3,11 +3,14 @@ const Inspiration = require("./models/inspiration");
 const User = require("./models/User");
 const Post = require("./models/vibe");
 const bodyParser = require("body-parser");
-const cors = require("cors")
+const cors = require("cors");
+const passport = require('./config/passport')();
+const userController = require('./controllers/users.js');
 
 app.use(cors())
-
+app.use('/users', userController)
 app.use(bodyParser.json());
+app.use(passport.initialize());
 
 app.get("/", (req, res) => {
   res.redirect("/home");
@@ -20,23 +23,23 @@ app.get("/home/inspirations", (req, res) => {
 });
 
 
-app.post("/home/inspirations", (req,res) => {
+app.post("/home/inspirations", (req, res) => {
   Inspiration.create(req.body)
-  .then(inspiration => {
-      res.json(inspiration)
-  })
-})
-
-
-app.put ('/home/inspirations/:id', (req, res) => {
-  Inspiration.findOneAndUpdate({_id: req.params.id}, req.body, {new : true})
     .then(inspiration => {
       res.json(inspiration)
     })
 })
 
-app.delete ('/home/inspirations/:id', (req, res) => {
-  Inspiration.findOneAndDelete({_id: req.params.id})
+
+app.put('/home/inspirations/:id', (req, res) => {
+  Inspiration.findOneAndUpdate({ _id: req.params.id }, req.body, { new: true })
+    .then(inspiration => {
+      res.json(inspiration)
+    })
+})
+
+app.delete('/home/inspirations/:id', (req, res) => {
+  Inspiration.findOneAndDelete({ _id: req.params.id })
     .then(inspiration => {
       res.json(inspiration)
     })
@@ -49,50 +52,50 @@ app.get("/home/users/", (req, res) => {
   })
 })
 
-app.put ('/home/users/:username', (req, res) => {
-  User.findOneAndUpdate({username: req.params.username}, req.body, {new : true})
+app.put('/home/users/:username', (req, res) => {
+  User.findOneAndUpdate({ username: req.params.username }, req.body, { new: true })
     .then(user => {
       res.json(user)
     })
 })
 
-app.delete ('/home/users/:username', (req, res) => {
-  User.findOneAndDelete({username: req.params.username})
+app.delete('/home/users/:username', (req, res) => {
+  User.findOneAndDelete({ username: req.params.username })
     .then(user => {
       res.json(user)
     })
 })
 
 
-app.post("/home/users/", (req,res) => {
+app.post("/home/users/", (req, res) => {
   User.create(req.body)
-  .then(user => {
+    .then(user => {
       res.json(user)
-  })
+    })
 })
 
 app.get("/home/posts/", (req, res) => {
-  Post.find({}).then((posts) =>{
+  Post.find({}).then((posts) => {
     res.json(posts)
   })
 })
 
-app.post("/home/posts/", (req,res) => {
+app.post("/home/posts/", (req, res) => {
   Post.create(req.body)
-  .then(post => {
-      res.json(post)
-  })
-})
-
-app.put ('/home/posts/:id', (req, res) => {
-  Post.findOneAndUpdate({_id: req.params.id}, req.body, {new : true})
     .then(post => {
       res.json(post)
     })
 })
 
-app.delete ('/home/posts/:id', (req, res) => {
-  Post.findOneAndDelete({_id: req.params.id})
+app.put('/home/posts/:id', (req, res) => {
+  Post.findOneAndUpdate({ _id: req.params.id }, req.body, { new: true })
+    .then(post => {
+      res.json(post)
+    })
+})
+
+app.delete('/home/posts/:id', (req, res) => {
+  Post.findOneAndDelete({ _id: req.params.id })
     .then(post => {
       res.json(post)
     })
