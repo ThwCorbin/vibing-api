@@ -9,7 +9,6 @@ if (process.env.NODE_ENV === "production") {
   } else {
     mongoURI = "mongodb://localhost/vibes";
   }
-  
 
 mongoose.connect(mongoURI, { useNewUrlParser: true })
 
