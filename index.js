@@ -36,6 +36,14 @@ app.get("/home/users/", (req, res) => {
   })
 })
 
+app.put ('/home/users/:username', (req, res) => {
+  User.findOneAndUpdate({username: req.params.username}, req.body, {new : true})
+    .then(user => {
+      res.json(user)
+    })
+})
+
+
 app.post("/home/users/", (req,res) => {
   User.create(req.body)
   .then(user => {
