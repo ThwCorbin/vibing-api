@@ -1,4 +1,4 @@
-const Post = require("../models/Post");
+const Post = require('../models/Post')
 const postJSON = require("./post.json");
 const User = require("../models/User");
 const userJSON = require("./user.json");
