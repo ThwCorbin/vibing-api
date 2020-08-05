@@ -1,4 +1,4 @@
-const Post = require('../models/Post.js')
+const Post = require("../models/vibe.js")
 const postJSON = require("./post.json");
 const User = require("../models/User");
 const userJSON = require("./user.json");
