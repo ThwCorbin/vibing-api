@@ -64,6 +64,14 @@ app.post("/home/posts/", (req,res) => {
   })
 })
 
+app.put ('/home/posts/:id', (req, res) => {
+  Post.findOneAndUpdate({_id: req.params.id}, req.body, {new : true})
+    .then(post => {
+      res.json(post)
+      console.log
+    })
+})
+
 app.listen(4000, () => {
     console.log("listening..")
 })
