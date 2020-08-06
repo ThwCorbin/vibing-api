@@ -2,7 +2,7 @@
 ## Vibing API
 This API is the database for all information on the Vibes website
 
-- Link to API https://vibing-api.herokuapp.com/home
+- Link to API https://vibing-api.herokuapp.com/
 
 ## Prerequisites
 - API
