@@ -1,22 +1,25 @@
 [
-    {
-        "post": "These are some really motivational words",
-        "comments": ["these words really are quite inspirational as well", "they truly are"]
+	{
+		"post": "Smile and the world smiles with you",
+		"comments": ["Woo hoo", "That is so true"]
+	},
+	{
+		"post": "Happy is as happy does",
+		"comments": ["That's right", "That's all your going to say about that"]
+	},
 
-    },
+	{
+		"post": "We are family! All my brothers, sisters, and me",
+		"comments": ["Yes", "Takes me back"]
+	},
 
-    {
-        "post": "Rah, Semper Fi, do or die",
-        "comments": ["Rah back", "Oorah Marine"]
-    },
+	{
+		"post": "I can see clearly now, the rain is gone",
+		"comments": ["I love that song", "Don't stop now!"]
+	},
 
-    {
-        "post": "I'll be a Marine until the day I die",
-        "comments": ["Didn't you get your DD-214 tattooed?", "Stop asking questions.", "And didn't you get dishonorably discharged for getting 3 DUI's in a year?"]
-    },
-
-    {
-        "post": "Another day, another dollar!",
-        "comments": ["Get that bread king!!!", "I'm tryna get like you!!"]
-    }
+	{
+		"post": "Happy Thirsty Thursday!",
+		"comments": ["Oh yeah!", "More like that!"]
+	}
 ]
